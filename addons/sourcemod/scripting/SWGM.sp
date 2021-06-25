@@ -100,12 +100,12 @@ public void OnClientDisconnect(int iClient)
 	g_iPlayerStatus[iClient] = UNASSIGNED;
 }
 
-public void SteamWorks_OnValidateClient(int iOwnerAuthID, int iAccountID)
+public int SteamWorks_OnValidateClient(int iOwnerAuthID, int iAccountID)
 {
 	SteamWorks_GetUserGroupStatusAuthID(iAccountID, g_iGroupID);
 }
 
-public void SteamWorks_OnClientGroupStatus(int iAccountID, int iGroupID, bool bIsMember, bool bIsOfficer)
+public int SteamWorks_OnClientGroupStatus(int iAccountID, int iGroupID, bool bIsMember, bool bIsOfficer)
 {
 	static int iClient;
 	if(iGroupID == g_iGroupID && (iClient = GetUserFromAccountID(iAccountID)) != -1)

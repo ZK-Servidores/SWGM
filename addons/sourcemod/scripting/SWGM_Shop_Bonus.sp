@@ -1,5 +1,6 @@
 #include <swgm>
 #include <shop>
+#include <multicolors>
 
 #pragma semicolon 1
 #pragma newdecls required
@@ -25,22 +26,22 @@ Handle g_hTimer[MAXPLAYERS+1];
 
 public void OnPluginStart()
 {
-	(CVAR = CreateConVar("sm_swgm_shop_bonus_type",		"1",	"0 - кредиты умножаются 1 - кредиты прибавляются", _, true, 0.0, true, 1.0)).AddChangeHook(OnTypeChange);
+	(CVAR = CreateConVar("sm_swgm_shop_bonus_type",		"1",	"0 - Credits are multiply 1 - Credits are added", _, true, 0.0, true, 1.0)).AddChangeHook(OnTypeChange);
 	g_bType = CVAR.BoolValue;
 	
-	(CVAR = CreateConVar("sm_swgm_shop_bonus_amount",	"2.0",	"Кол-во прибавляемых/умножаемых кредитов", _, true, 0.0)).AddChangeHook(OnAmountChange);
+	(CVAR = CreateConVar("sm_swgm_shop_bonus_amount",	"2.0",	"Number of added/multiplied credits", _, true, 0.0)).AddChangeHook(OnAmountChange);
 	g_fCredits = CVAR.FloatValue;
 	
-	(CVAR = CreateConVar("sm_swgm_shop_bonus_credits",	"5",	"Кол-во выдаваемых кредитов раз в N секунд", _, true, 0.0)).AddChangeHook(OnCreditsChange);
+	(CVAR = CreateConVar("sm_swgm_shop_bonus_credits",	"5",	"Number of credits issued every N seconds", _, true, 0.0)).AddChangeHook(OnCreditsChange);
 	g_iCredits = CVAR.IntValue;
 	
-	(CVAR = CreateConVar("sm_swgm_shop_bonus_interval",	"60.0",	"Интервал выдавания кредитов", _, true, 0.0)).AddChangeHook(OnIntervalChange);
+	(CVAR = CreateConVar("sm_swgm_shop_bonus_interval",	"60.0",	"Credits disbursement interval", _, true, 0.0)).AddChangeHook(OnIntervalChange);
 	g_fInterval = CVAR.FloatValue;
 	
-	(CVAR = CreateConVar("sm_swgm_shop_bonus_playing",	"1",	"0 - выдает кредиты всем 1 - не выдает наблюдателям", _, true, 0.0, true, 1.0)).AddChangeHook(OnPlayChange);
+	(CVAR = CreateConVar("sm_swgm_shop_bonus_playing",	"1",	"0 - Issues credits to everyone 1 - Does not issue to observers", _, true, 0.0, true, 1.0)).AddChangeHook(OnPlayChange);
 	g_bPlay = CVAR.BoolValue;
 	
-	(CVAR = CreateConVar("sm_swgm_shop_bonus_discount",	"0.5",	"Скидка на предметы")).AddChangeHook(OnDiscChange);
+	(CVAR = CreateConVar("sm_swgm_shop_bonus_discount",	"0.5",	"Item Discount")).AddChangeHook(OnDiscChange);
 	g_fDisc = CVAR.FloatValue;
 	
 	LoadTranslations("swgm_shop_bonus.phrases.txt");
@@ -92,16 +93,16 @@ public void OnClientDisconnect(int iClient)
 	if(g_hTimer[iClient]) KillTimer(g_hTimer[iClient]); g_hTimer[iClient] = null;
 }
 
-public Action Timer_Give(Handle hTimer, int iClient)
+public Action Timer_Give(Handle hTimer, int Client)
 {
-	if(SWGM_IsPlayerValidated(iClient))
+	if(SWGM_IsPlayerValidated(Client))
 	{
-		if(g_bPlay && GetClientTeam(iClient) < 2)
+		if(g_bPlay && GetClientTeam(Client) < 2)
 		{
 			return Plugin_Continue;
 		}
-		Shop_GiveClientCredits(iClient, g_iCredits, IGNORE_FORWARD_HOOK);
-		PrintToChat(iClient, "%t", "Credits_Give", g_iCredits);
+		Shop_GiveClientCredits(Client, g_iCredits, IGNORE_FORWARD_HOOK);
+		CPrintToChat(Client, "%t", "Credits_Give", g_iCredits);
 	}
 	return Plugin_Continue;
 }

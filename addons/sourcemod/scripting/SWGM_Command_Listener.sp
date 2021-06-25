@@ -1,4 +1,5 @@
 #include <swgm>
+#include <multicolors>
 
 #pragma semicolon 1
 #pragma newdecls required
@@ -21,16 +22,16 @@ public void OnAllPluginsLoaded()
 	RegAdminCmd("sm_swgm_cl_reload", CMD_RELOAD, ADMFLAG_BAN);
 }
 
-public Action CMD_RELOAD(int iClient, int iArgs)
+public Action CMD_RELOAD(int Client, int iArgs)
 {
 	LoadConfig();
 }
 
-public Action Check(int iClient, const char[] sCommand, int iArgc)
+public Action Check(int Client, const char[] sCommand, int iArgc)
 {
-	if(iClient != 0 && SWGM_IsPlayerValidated(iClient) && !SWGM_InGroup(iClient))
+	if(Client != 0 && SWGM_IsPlayerValidated(Client) && !SWGM_InGroup(Client))
 	{
-		PrintToChat(iClient, "%t", "JoinSteam");
+		CPrintToChat(Client, "%t", "JoinSteam");
 		return Plugin_Stop;
 	}
 	return Plugin_Continue;
