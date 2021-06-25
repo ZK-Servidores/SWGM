@@ -89,7 +89,7 @@ public void OnDiscChange(ConVar convar, const char[] oldValue, const char[] newV
 
 public void OnClientDisconnect(int iClient)
 {
-	if(g_hTimer[iClient])	KillTimer(g_hTimer[iClient]); g_hTimer[iClient] = null;
+	if(g_hTimer[iClient]) KillTimer(g_hTimer[iClient]); g_hTimer[iClient] = null;
 }
 
 public Action Timer_Give(Handle hTimer, int iClient)

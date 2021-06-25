@@ -43,7 +43,7 @@ public void OnPluginStart()
 	(CVAR = CreateConVar("sm_swgm_timer",	"60.0",	"Interval beetwen Steam Group checks",	_, 	true, 		0.0)).AddChangeHook(OnTimeChange);
 	g_hTimer = CreateTimer(CVAR.FloatValue, 		Check_Timer, 							_, 	TIMER_REPEAT);
 	
-	RegAdminCmd("sm_swgm_check", 	CMD_Check, 	ADMFLAG_ROOT);
+	RegAdminCmd("sm_swgm_check", CMD_Check, ADMFLAG_BAN);
 
 	AutoExecConfig(true, "swgm", "sourcemod/swgm");
 }

@@ -7,11 +7,11 @@ It can check player is in Steam Group.
 - **`sm_swgm_check`** - Force check all connected players;
 
 ## Cvars
-- **`sm_swgm_groupid`** - Identifier of your steam group;
-- **`sm_swgm_timer`** - Interval beetwen checks;
+- **`sm_swgm_groupid "0"`** - Steam ID Group Identifier;
+- **`sm_swgm_timer "60"`** - Interval between checks on the Steam Group;
 
 ## Requirements
-- Sourcemod 1.8+;
+- SourceMod 1.10+;
 - Latest version of SteamWorks;
 
 ## Instalation

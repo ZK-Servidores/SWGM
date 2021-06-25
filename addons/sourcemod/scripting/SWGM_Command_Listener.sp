@@ -18,7 +18,7 @@ public void OnAllPluginsLoaded()
 	
 	LoadConfig();
 	
-	RegAdminCmd("sm_swgm_cl_reload", CMD_RELOAD, ADMFLAG_ROOT);
+	RegAdminCmd("sm_swgm_cl_reload", CMD_RELOAD, ADMFLAG_BAN);
 }
 
 public Action CMD_RELOAD(int iClient, int iArgs)
