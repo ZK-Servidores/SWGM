@@ -4,11 +4,11 @@ This plugin provides additional features for other plugin. Working as core.
 It can check player is in Steam Group.
 
 ## Commands
-- **`sm_swgm_check`** — Force check all connected players;
+- **`sm_swgm_check`** - Force check all connected players;
 
 ## Cvars
-- **`sm_swgm_groupid`** — Identifier of your steam group;
-- **`sm_swgm_timer`** — Interval beetwen checks;
+- **`sm_swgm_groupid`** - Identifier of your steam group;
+- **`sm_swgm_timer`** - Interval beetwen checks;
 
 ## Requirements
 - Sourcemod 1.8+;
