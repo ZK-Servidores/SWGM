@@ -1,0 +1,10 @@
+"Phrases"
+{
+	"Credits_Give"
+	{
+		"#format"		"{1:i}"
+		"en"			"{default}[ {darkred}ZK Servidores™ {default}] {green}You got {darkred}{1} credits {green}because you join our {darkred}Steam Group{green}."
+		"pt"			"{default}[ {darkred}ZK Servidores™ {default}] {green}Você recebeu {darkred}{1} créditos {green}porque entrou em nosso {darkred}Grupo Steam{green}."
+		"ru"			"{default}[ {darkred}ZK Servidores™ {default}] {green}Вы получили {1} кредитов, потому что состоите в нашей Steam группе."
+	}
+}

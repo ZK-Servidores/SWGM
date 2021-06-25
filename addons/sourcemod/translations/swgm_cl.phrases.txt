@@ -1,0 +1,11 @@
+"Phrases"
+{
+	"JoinSteam"
+	{
+		"en"		"{default}[ {darkred}ZK Servidores™ {default}] {green}First join our {darkred}Steam Group{green} - {darkred}steamcommunity.com/groups/zkservidores"
+		"pt"		"{default}[ {darkred}ZK Servidores™ {default}] {green}Primeiro entre em nosso {darkred}Grupo Steam{green} - {darkred}steamcommunity.com/groups/zkservidores"
+		"ru"		"{default}[ {darkred}ZK Servidores™ {default}] {green}Сначала вступите в нашу Steam группу - {darkred}steamcommunity.com/groups/zkservidores"
+		"fr"		"{default}[ {darkred}ZK Servidores™ {default}] {green}En premier, rejoignez notre Groupe Steam - {darkred}steamcommunity.com/groups/zkservidores"
+		"hu"		"{default}[ {darkred}ZK Servidores™ {default}] {green}Először csatlakozz a Steam-es csoportunkhoz - {darkred}steamcommunity.com/groups/zkservidores"
+	}
+}
