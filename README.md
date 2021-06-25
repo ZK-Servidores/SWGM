@@ -19,4 +19,4 @@ This plugin provides additional features for others plugins, working as core.
 ## Instalation
 Put these files into your sourcemod folder.
 
-Open **Group Steam Administration Panel** and copy ID do Grupo Steam then set it in **`swgm_groupid`**, located in the **`cfg/sourcemod/swgm.cfg`** folder.
+Open **Group Steam Administration Panel** and copy **Group Steam ID** then set it in **`swgm_groupid`**, located in the **`cfg/sourcemod/swgm.cfg`** folder.
