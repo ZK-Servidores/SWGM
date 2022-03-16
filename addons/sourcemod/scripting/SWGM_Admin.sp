@@ -8,7 +8,7 @@ public Plugin myinfo =
 	name = 	"[SWGM] Admin",
 	author = "Someone, crashzk",
 	description = "",
-	version = "1.1fix",
+	version = "1.1.1",
 	url = "https://github.com/ZK-Servidores/Plugins-SourceMod"
 }
 

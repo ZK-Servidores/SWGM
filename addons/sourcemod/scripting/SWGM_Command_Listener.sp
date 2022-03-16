@@ -9,7 +9,7 @@ public Plugin myinfo =
 	name = "[SWGM] Command Listener",
 	author = "Someone, crashzk",
 	description = "",
-	version = "1.2fix",
+	version = "1.2.1",
 	url = "https://github.com/ZK-Servidores/Plugins-SourceMod"
 };
 

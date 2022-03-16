@@ -10,7 +10,7 @@ public Plugin myinfo =
 	name = "[SWGM] Shop Bonus",
 	author = "Someone, crashzk",
 	description = "Bonuses for players who joined the Steam Group",
-	version = "1.3fix",
+	version = "1.3.1",
 	url = "https://github.com/ZK-Servidores/Plugins-SourceMod"
 };
 

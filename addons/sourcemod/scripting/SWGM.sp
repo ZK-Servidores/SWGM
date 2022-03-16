@@ -9,7 +9,7 @@ public Plugin myinfo =
 	name = "Steam Works Group Manager",
 	author = "Someone, crashzk",
 	description = "Steam Group membership check features for plugins",
-	version = "1.9fix",
+	version = "1.9.1",
 	url = "https://github.com/ZK-Servidores/Plugins-SourceMod"
 };
 
@@ -133,7 +133,7 @@ public int SteamWorks_OnClientGroupStatus(int iAccountID, int iGroupID, bool bIs
 public int GetUserFromAccountID(int iAccountID)
 {
 	static int i;
-	for (i = 1; i <= MaxClients; ++i) if(IsClientConnected(i) && !IsFakeClient(i))
+	for (i = 1; i <= MaxClients; ++i) if(IsClientInGame(i) && !IsFakeClient(i))
     {
 		if(g_iAccountID[i] == 0)
 		{

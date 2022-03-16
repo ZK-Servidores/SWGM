@@ -9,7 +9,7 @@ public Plugin myinfo =
 	name = "[SWGM] VIP",
 	author = "Someone, crashzk",
 	description = "Issuing a VIP status for players in the Steam Group",
-	version = "1.8fix",
+	version = "1.8.1",
 	url = "https://github.com/ZK-Servidores/Plugins-SourceMod"
 };
 
